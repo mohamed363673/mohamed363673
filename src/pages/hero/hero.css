@@ -1,0 +1,65 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../../../public/HERO.svg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: repeat-x;
+}
+
+.loop{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    height: 180px;
+    /* background-color: #111; */
+    display: flex;
+    align-items: center;
+    font-size: 150px;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 5px 5px 1px black,10px 10px 1px black;
+
+}
+.loop h1{
+    animation: linear infinite 4s loop;
+    letter-spacing: 15px;
+    padding: 0 10px;
+    filter: drop-shadow(0 0 10px #0073ff6c);
+}
+@keyframes loop {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.imgpx{
+    filter: drop-shadow(0 0 10px black);
+}
+.box{
+    position: absolute;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #003472;
+    animation: linear forwards 2s box;
+}
+@keyframes box {
+    0%{
+        translate: 0 0;
+        rotate: 0deg;
+    }
+    100%{
+        translate: var(--x) var(--y);
+        rotate: 360deg;
+        opacity: 0;
+    }
+}
